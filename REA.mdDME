@@ -1,0 +1,90 @@
+Employee Management System
+
+A RESTful backend application built with Java and Spring Boot to manage employee records using MySQL.
+
+Features
+
+- Create, read, update, and delete employee records (CRUD)
+- Store employee data in a MySQL database
+- Validate employee names, email addresses, and salaries
+- Handle errors with appropriate HTTP status codes
+- Prevent duplicate employee email addresses
+- Paginate and sort employee records
+- Document and test API endpoints using Swagger UI
+- Unit tests for service-layer logic
+
+Technologies Used
+
+- Language: Java 21
+- Framework: Spring Boot
+- Database: MySQL
+- Data Access: Spring Data JPA / Hibernate
+- Build Tool: Maven
+- API Documentation: Swagger UI / OpenAPI
+- Testing: JUnit and Mockito
+- Version Control: Git and GitHub
+
+API Endpoints
+
+Method| Endpoint| Description
+GET| "/employees"| Get paginated employee records
+GET| "/employees/{id}"| Get an employee by ID
+POST| "/employees"| Create an employee
+PUT| "/employees/{id}"| Update an employee
+DELETE| "/employees/{id}"| Delete an employee
+
+Pagination and Sorting
+
+Example:
+
+"GET /employees?page=0&size=5&sortBy=name"
+
+- "page": Page number, starting from 0
+- "size": Number of records per page
+- "sortBy": Field to sort by, such as "id", "name", "email", or "salary"
+
+Prerequisites
+
+- Java 21 or compatible JDK
+- MySQL Server
+- Maven, or the included Maven wrapper
+
+Setup and Run
+
+1. Clone the repository:
+   
+   git clone https://github.com/Chinmayee666ck/EmployeeManagementSystem.git
+
+2. Open the project in IntelliJ IDEA.
+
+3. Create a MySQL database:
+   
+   CREATE DATABASE employee_db;
+
+4. Configure your local database connection in "src/main/resources/application.properties". Set the database URL, username, and password for your environment. Do not commit credentials to GitHub.
+
+5. Run the application from IntelliJ, or use the Maven wrapper on Windows:
+   
+   .\mvnw.cmd spring-boot:run
+
+6. Open Swagger UI using the port configured for your application:
+   
+   "http://localhost:8080/swagger-ui/index.html"
+   
+   If your application runs on another port, replace "8080" with that port.
+
+Testing
+
+Run the tests with the Maven wrapper:
+
+.\mvnw.cmd test
+
+Error Handling
+
+The API handles common errors, including invalid input, missing employee records, and duplicate email addresses, using appropriate HTTP status codes.
+
+Author
+
+Chinmayee C K
+
+GitHub: https://github.com/Chinmayee666ck
