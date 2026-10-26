@@ -1,0 +1,47 @@
+###Add a new employee
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+ "name":"Chaya",
+  "email":"chaya@example1.com",
+  "salary":38000
+}
+
+###Get all employees
+GET http://localhost:8080/employees
+
+###Get employee by id
+GET http://localhost:8080/employees/1
+
+###Update an employee
+PUT http://localhost:8080/employees/1
+Content-Type: application/json
+
+{
+  "name": "Chaya C K",
+  "email": "chayack@example.com",
+  "salary": 4000
+}
+
+###delete an employee
+DELETE http://localhost:8080/employees/1
+
+### Add a new employee
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+"name":"Pruthvi",
+"email":"pruthvi12@gmail.com",
+"salary":30000
+}
+### Add a new emplloyee
+POST http://localhost:8080/employees
+Content-Type: application/json
+
+{
+  "name":"Pruthvi",
+  "email":"pruthvi12@gmail.com",
+  "salary":-30000
+}
